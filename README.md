@@ -1,3 +1,5 @@
-## An application that facilitates fund gathering process for community centre in Singapore
+## Fund gathering application
+
+An application that facilitates fund gathering process for community centre in Singapore
 
 This project is implemented using JavaFX, SQLite
