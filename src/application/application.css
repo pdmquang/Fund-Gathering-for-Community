@@ -1,0 +1,32 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+.image-view:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+#flip_detail{
+	-fx-text-fill: white;
+	-fx-text-alignment : center;
+}
+
+.root {
+	-fx-spacing: 30;
+	-fx-padding: 10;
+}
+
+#centerVbox {
+}
+
+.button {
+	-fx-font-family: "Arial";
+	-fx-font-size: 11px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #383640;
+}
+
+.button:hover {
+	-fx-background-color: linear-gradient(#2A5058, #61a2b1);
+	-fx-text-fill: #ffffff;
+}

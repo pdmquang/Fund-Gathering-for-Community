@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Sponsor">
+   <center>
+      <StackPane fx:id="stackPane">
+         <children>
+            <ScrollPane fx:id="scrollPane2" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" prefHeight="351.0" prefWidth="555.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="vBox1" prefHeight="465.0" prefWidth="598.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="602.0">
+                           <children>
+                              <Label fx:id="eventNameLbl2" alignment="CENTER" text="Please confirm donation for:  Event Name" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="499.0">
+                           <children>
+                              <GridPane fx:id="gridPane2" alignment="CENTER" prefHeight="50.0" prefWidth="374.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints maxWidth="106.0" minWidth="15.0" prefWidth="41.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="147.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="146.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="numberLbl" text="No." />
+                                    <Label fx:id="donationLbl" prefHeight="17.0" prefWidth="95.0" text="Type of Donation" GridPane.columnIndex="1" />
+                                    <Label fx:id="amtLbl" prefHeight="17.0" prefWidth="188.0" text="Amount of Donation" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="602.0">
+                           <children>
+                              <TextArea fx:id="commentsTxtArea2" disable="true" prefHeight="391.0" prefWidth="372.0" promptText="Notes/Comments" scrollLeft="1.0" scrollTop="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="316.0" prefWidth="472.0" />
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="602.0">
+                           <children>
+                              <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#createSponsorshipRecord" text="Submit" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="57.0" prefWidth="472.0">
+                           <children>
+                              <Button fx:id="backwardBtn2" mnemonicParsing="false" onAction="#backwardChangeScene" text="&lt;" />
+                              <Label fx:id="pagination2" text="2/2" />
+                              <Button fx:id="forwardBtn2" disable="true" mnemonicParsing="false" text="&gt;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="scrollPane1" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" prefHeight="573.0" prefWidth="525.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="vBox" prefHeight="465.0" prefWidth="598.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="505.0">
+                           <children>
+                              <Label fx:id="eventNameLbl" alignment="CENTER" text="Event Name" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="162.0" prefWidth="506.0">
+                           <children>
+                              <TextArea fx:id="eventDetailsTxtArea" editable="false" prefHeight="7.0" prefWidth="372.0" scrollLeft="1.0" scrollTop="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="163.0" prefWidth="506.0">
+                           <children>
+                              <TextArea fx:id="requestTxtArea" editable="false" prefHeight="0.0" prefWidth="372.0" scrollLeft="1.0" scrollTop="1.0" text="Donation request Specification:&#10; " />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="96.0" prefWidth="494.0">
+                           <children>
+                              <GridPane fx:id="gridPane" alignment="CENTER" prefHeight="50.0" prefWidth="374.0">
+                                <columnConstraints>
+                                  <ColumnConstraints maxWidth="106.0" minWidth="15.0" prefWidth="41.0" />
+                                    <ColumnConstraints maxWidth="109.0" minWidth="14.0" prefWidth="40.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="147.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="146.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addItem" onMouseClicked="#initializeDropDown" prefHeight="25.0" prefWidth="35.0" text="+" />
+                                    <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#removeItem" prefHeight="25.0" prefWidth="35.0" text="-" GridPane.columnIndex="1" />
+                                    <ComboBox fx:id="comboBox" editable="true" prefWidth="150.0" promptText="Donation Items" GridPane.columnIndex="2" />
+                                    <TextField fx:id="amtFld" prefHeight="25.0" prefWidth="144.0" promptText="Amount of Donation" GridPane.columnIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="169.0" prefWidth="501.0">
+                           <children>
+                              <TextArea fx:id="commentsTxtArea" prefHeight="44.0" prefWidth="372.0" promptText="Notes/Comments" scrollLeft="1.0" scrollTop="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="72.0" prefWidth="451.0" />
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="477.0">
+                           <children>
+                              <Button fx:id="backwardBtn" disable="true" mnemonicParsing="false" text="&lt;" />
+                              <Label fx:id="pagination" text="1/2" />
+                              <Button fx:id="forwardBtn" mnemonicParsing="false" onAction="#forwardChangeScene" text="&gt;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bigPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UpdateParticular">
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="365.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5">
+                           <items>
+                              <GridPane prefWidth="426.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="130.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="291.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="NRIC :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="nric" disable="true" editable="false" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                    <Label prefHeight="20.0" prefWidth="120.0" text="Name as in NRIC :" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                    <Label text="Gender :" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <RadioButton fx:id="male" mnemonicParsing="false" text="Male" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="gender" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="female" mnemonicParsing="false" text="Female" toggleGroup="$gender" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="60.0" />
+                                       </GridPane.margin>
+                                    </RadioButton>
+                                    <Label prefHeight="20.0" prefWidth="93.0" text="Date of Birth :" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="dob" promptText="dd/mm/yyyy" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="Occupation :" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="occupation" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="lblCompany" text="Company :" visible="false" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="company" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </GridPane>
+                              <GridPane prefWidth="426.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="130.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="291.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="105.0" text="Home Address :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="20.0" prefWidth="119.0" text="Contact Number :" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="contactNo" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label text="Home Number :" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="hContactNo" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label prefHeight="20.0" prefWidth="100.0" text="Email Address :" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label prefHeight="20.0" prefWidth="79.0" text="Language :" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="language" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextArea fx:id="address" wrapText="true" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets top="15.0" />
+                                       </GridPane.margin>
+                                    </TextArea>
+                                 </children>
+                              </GridPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="33.0">
+                     <children>
+                        <Label layoutX="343.0" layoutY="7.0" text="Update Particulars" textFill="#c33636">
+                           <font>
+                              <Font name="Broadway" size="17.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="save" layoutX="764.0" layoutY="5.0" mnemonicParsing="false" onAction="#save" text="Save" />
+                        <Button fx:id="reset" layoutX="810.0" layoutY="5.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </center>
+   <top>
+      <BorderPane prefHeight="112.0" prefWidth="861.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox prefHeight="112.0" prefWidth="448.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="homeBtn" accessibleText="ViewEvent.fxml" mnemonicParsing="false" onAction="#goToHome" prefHeight="47.0" prefWidth="100" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="12.0" visible="false" />
+                  <Button fx:id="eventBtn" mnemonicParsing="false" onAction="#popUpEventOption" prefHeight="47.0" prefWidth="100" text="Event">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Event.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="12.0" />
+                  <Button fx:id="feedbackBtn" accessibleText="FeedbackForm.fxml" mnemonicParsing="false" onAction="#goToFeedback" prefHeight="47.0" prefWidth="100" text="Feedback">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Feedback.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="10.0" prefWidth="12.0" visible="false" />
+                  <Button fx:id="maintainBtn" accessibleText="ViewFeedback.fxml" mnemonicParsing="false" onAction="#goToMaintain" prefHeight="47.0" prefWidth="100" text="Maintain">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Maintain.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="7.0" />
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="132.0" prefWidth="412.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="132.0" prefWidth="415.0">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="86.0" prefWidth="412.0">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="62.0" prefWidth="95.0" text="Username">
+                                 <font>
+                                    <Font name="AR ESSENCE" size="19.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="particularBtn" fitHeight="61.0" fitWidth="71.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#popUpParticularOption" pickOnBounds="true">
+                                 <image>
+                                    <Image url="Image/User.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <ToolBar prefHeight="35.0" prefWidth="309.0" style="-fx-background-color: none;">
+                           <items>
+                              <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="9.0" prefWidth="17.0">
+                                 <graphic>
+                                    <ImageView fx:id="goToSearch" accessibleText="Search.fxml" fitHeight="21.0" fitWidth="26.0">
+                                       <image>
+                                          <Image url="Image/Search Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="searchBar" onAction="#searchBarClicked" onMouseClicked="#searchBarClicked" prefHeight="25.0" prefWidth="150.0" />
+                           </items>
+                           <VBox.margin>
+                              <Insets left="70.0" />
+                           </VBox.margin>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+</BorderPane>

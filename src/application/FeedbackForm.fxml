@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bigPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="861.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FeedbackController">
+   <center>
+      <ScrollPane fx:id="mainScroll" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <content>
+            <BorderPane prefHeight="254.0" prefWidth="407.0">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="479.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="491.0">
+                                 <children>
+                                    <Label fx:id="titleText" text="Title">
+                                       <font>
+                                          <Font name="Georgia" size="30.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="A" alignment="CENTER" prefHeight="48.0" prefWidth="109.0">
+                                 <children>
+                                    <Label fx:id="isConnected" text="ConnectionStatus" />
+                                 </children></HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="328.0" spacing="25.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onMouseClicked="#btnSave" text="Save" />
+                                    <Button mnemonicParsing="false" onMouseClicked="#btnCancel" text="Cancel" />
+                                    <Button mnemonicParsing="false" onMouseClicked="#btnSubmit" text="Submit" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox prefHeight="350.0" prefWidth="859.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="859.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                       <children>
+                                          <Label text="Strongly" />
+                                          <Label text="Agree">
+                                             <VBox.margin>
+                                                <Insets right="5.0" />
+                                             </VBox.margin></Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                       <children>
+                                          <Label text="Agree" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                       <children>
+                                          <Label text="Neutral" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                       <children>
+                                          <Label text="Disagree" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                       <children>
+                                          <Label text="Strongly" />
+                                          <Label text="Disagree" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="321.0" prefWidth="859.0">
+                                 <children>
+                                    <HBox prefHeight="321.0" prefWidth="504.0">
+                                       <children>
+                                          <VBox prefHeight="321.0" prefWidth="37.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="37.0">
+                                                   <children>
+                                                      <Label fx:id="q1" text="Q1" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="37.0">
+                                                   <children>
+                                                      <Label fx:id="q2" text="Q2" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="37.0">
+                                                   <children>
+                                                      <Label fx:id="q3" text="Q3" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="37.0">
+                                                   <children>
+                                                      <Label fx:id="q4" text="Q4" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="37.0">
+                                                   <children>
+                                                      <Label fx:id="q5" text="Q5" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="37.0">
+                                                   <children>
+                                                      <Label fx:id="q6" text="Q6" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="45.0" prefWidth="37.0">
+                                                   <children>
+                                                      <Label fx:id="q7" text="Q7" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="321.0" prefWidth="467.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label fx:id="q1text" text="text" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" right="20.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label fx:id="q2text" text="text" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" right="20.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label fx:id="q3text" text="text" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" right="20.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label fx:id="q4text" text="text" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" right="20.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label fx:id="q5text" text="text" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" right="20.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label fx:id="q6text" text="text" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" right="20.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label fx:id="q7text" text="text" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" right="20.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="321.0" prefWidth="355.0">
+                                       <children>
+                                          <VBox prefHeight="321.0" prefWidth="377.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="355.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ1SA" mnemonicParsing="false">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Q1Button" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ1A" mnemonicParsing="false" onMouseClicked="#Q1A" toggleGroup="$Q1Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ1N" mnemonicParsing="false" onMouseClicked="#Q1N" toggleGroup="$Q1Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ1D" mnemonicParsing="false" onMouseClicked="#Q1D" toggleGroup="$Q1Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ1SD" mnemonicParsing="false" onMouseClicked="#Q1SD" toggleGroup="$Q1Button" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="355.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ2SA" mnemonicParsing="false" onMouseClicked="#Q2SA">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Q2Button" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ2A" mnemonicParsing="false" onMouseClicked="#Q2A" toggleGroup="$Q2Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ2N" mnemonicParsing="false" onMouseClicked="#Q2N" toggleGroup="$Q2Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ2D" mnemonicParsing="false" onMouseClicked="#Q2D" toggleGroup="$Q2Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ2SD" mnemonicParsing="false" onMouseClicked="#Q2SD" toggleGroup="$Q2Button" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="355.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ3SA" mnemonicParsing="false" onMouseClicked="#Q3SA">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Q3Button" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ3A" mnemonicParsing="false" onMouseClicked="#Q3A" toggleGroup="$Q3Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ3N" mnemonicParsing="false" onMouseClicked="#Q3N" toggleGroup="$Q3Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ3D" mnemonicParsing="false" onMouseClicked="#Q3D" toggleGroup="$Q3Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ3SD" mnemonicParsing="false" onMouseClicked="#Q3SD" toggleGroup="$Q3Button" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="355.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ4SA" mnemonicParsing="false" onMouseClicked="#Q4SA">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Q4Button" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ4A" mnemonicParsing="false" onMouseClicked="#Q4A" toggleGroup="$Q4Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ4N" mnemonicParsing="false" onMouseClicked="#Q4N" toggleGroup="$Q4Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ4D" mnemonicParsing="false" onMouseClicked="#Q4D" toggleGroup="$Q4Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ4SD" mnemonicParsing="false" onMouseClicked="#Q4SD" toggleGroup="$Q4Button" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="355.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ5SA" mnemonicParsing="false" onMouseClicked="#Q5SA">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Q5Button" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ5A" mnemonicParsing="false" onMouseClicked="#Q5A" toggleGroup="$Q5Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ5N" mnemonicParsing="false" onMouseClicked="#Q5N" toggleGroup="$Q5Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ5D" mnemonicParsing="false" onMouseClicked="#Q5D" toggleGroup="$Q5Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ5SD" mnemonicParsing="false" onMouseClicked="#Q5SD" toggleGroup="$Q5Button" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="355.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ6SA" mnemonicParsing="false" onMouseClicked="#Q6SA">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Q6Button" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ6A" mnemonicParsing="false" onMouseClicked="#Q6A" toggleGroup="$Q6Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ6N" mnemonicParsing="false" onMouseClicked="#Q6N" toggleGroup="$Q6Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ6D" mnemonicParsing="false" onMouseClicked="#Q6D" toggleGroup="$Q6Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ6SD" mnemonicParsing="false" onMouseClicked="#Q6SD" toggleGroup="$Q6Button" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="355.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ7SA" mnemonicParsing="false" onMouseClicked="#Q7SA">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Q7Button" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ7A" mnemonicParsing="false" onMouseClicked="#Q7A" toggleGroup="$Q7Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ7N" mnemonicParsing="false" onMouseClicked="#Q7N" toggleGroup="$Q7Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ7D" mnemonicParsing="false" onMouseClicked="#Q7D" toggleGroup="$Q7Button" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="39.0" prefWidth="71.0">
+                                                         <children>
+                                                            <RadioButton fx:id="radioBtnQ7SD" mnemonicParsing="false" onMouseClicked="#Q7SD" toggleGroup="$Q7Button" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     
+                  </VBox>
+               </center></BorderPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <BorderPane prefHeight="112.0" prefWidth="861.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox prefHeight="112.0" prefWidth="448.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="homeBtn" accessibleText="ViewEvent.fxml" mnemonicParsing="false" onAction="#goToHome" prefHeight="47.0" prefWidth="100" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="12.0" visible="false" />
+                  <Button fx:id="eventBtn" mnemonicParsing="false" onAction="#popUpEventOption" prefHeight="47.0" prefWidth="100" text="Event">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Event.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="12.0" />
+                  <Button fx:id="feedbackBtn" accessibleText="FeedbackForm.fxml" mnemonicParsing="false" onAction="#goToFeedback" prefHeight="47.0" prefWidth="100" text="Feedback">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Feedback.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="10.0" prefWidth="12.0" visible="false" />
+                  <Button fx:id="maintainBtn" accessibleText="ViewFeedback.fxml" mnemonicParsing="false" onAction="#goToMaintain" prefHeight="47.0" prefWidth="100" text="Maintain">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Maintain.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="7.0" />
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="132.0" prefWidth="412.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="132.0" prefWidth="415.0">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="86.0" prefWidth="412.0">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="62.0" prefWidth="95.0" text="Username">
+                                 <font>
+                                    <Font name="AR ESSENCE" size="19.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="particularBtn" fitHeight="61.0" fitWidth="71.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#popUpParticularOption" pickOnBounds="true">
+                                 <image>
+                                    <Image url="Image/User.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <ToolBar prefHeight="35.0" prefWidth="309.0" style="-fx-background-color: none;">
+                           <items>
+                              <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="9.0" prefWidth="17.0">
+                                 <graphic>
+                                    <ImageView fx:id="goToSearch" accessibleText="Search.fxml" fitHeight="21.0" fitWidth="26.0">
+                                       <image>
+                                          <Image url="Image/Search Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="searchBar" onAction="#searchBarClicked" onMouseClicked="#searchBarClicked" prefHeight="25.0" prefWidth="150.0" />
+                           </items>
+                           <VBox.margin>
+                              <Insets left="70.0" />
+                           </VBox.margin>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+</BorderPane>

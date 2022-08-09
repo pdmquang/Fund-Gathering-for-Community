@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bigPanel" maxWidth="1328.0" minWidth="1289.0" onMouseClicked="#resizeSearchBar" prefHeight="608.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewFeedback">
+   <center>
+      <StackPane maxWidth="1251.0" minWidth="788.0" prefHeight="450.0" prefWidth="1250.0">
+         <children>
+            <BorderPane fx:id="borderFeedback" maxHeight="-Infinity" maxWidth="1262.0" minHeight="-Infinity" minWidth="1262.0" prefHeight="450.0" prefWidth="1262.0">
+               <top>
+                  <VBox fx:id="vBoxSwitch">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1256.0">
+                           <children>
+                              <ComboBox fx:id="eventCombo" onAction="#eventComboChange" prefWidth="150.0" promptText="Event">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <ImageView fitHeight="47.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Picture%20For%20Event/Filter.png" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Gender" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </top>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <BorderPane maxWidth="1300.0" minWidth="1298.0" prefHeight="158.0" prefWidth="1298.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <VBox prefHeight="36.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ComboBox fx:id="eventList" onAction="#eventComboChange" prefWidth="150.0" promptText="Option" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </bottom>
+         <center>
+            <BorderPane prefHeight="112.0" prefWidth="861.0" BorderPane.alignment="CENTER">
+               <left>
+                  <HBox prefHeight="112.0" prefWidth="448.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="homeBtn" accessibleText="ViewEvent.fxml" mnemonicParsing="false" onAction="#goToHome" prefHeight="47.0" prefWidth="100" text="Home">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="Image/Home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator prefHeight="0.0" prefWidth="12.0" visible="false" />
+                        <Button fx:id="eventBtn" mnemonicParsing="false" onAction="#popUpEventOption" prefHeight="47.0" prefWidth="100" text="Event">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="Image/Event.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator prefHeight="0.0" prefWidth="12.0" />
+                        <Button fx:id="feedbackBtn" accessibleText="FeedbackForm.fxml" mnemonicParsing="false" onAction="#goToFeedback" prefHeight="47.0" prefWidth="100" text="Feedback">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="Image/Feedback.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator prefHeight="10.0" prefWidth="12.0" visible="false" />
+                        <Button fx:id="maintainBtn" accessibleText="ViewFeedback.fxml" mnemonicParsing="false" onAction="#goToMaintain" prefHeight="47.0" prefWidth="100" text="Maintain">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="Image/Maintain.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator prefHeight="0.0" prefWidth="7.0" />
+                     </children>
+                  </HBox>
+               </left>
+               <right>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="132.0" prefWidth="412.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="BOTTOM_LEFT" prefHeight="132.0" prefWidth="415.0">
+                           <children>
+                              <HBox alignment="TOP_RIGHT" prefHeight="86.0" prefWidth="412.0">
+                                 <children>
+                                    <Label alignment="BOTTOM_CENTER" prefHeight="62.0" prefWidth="95.0" text="Username">
+                                       <font>
+                                          <Font name="AR ESSENCE" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="particularBtn" fitHeight="61.0" fitWidth="71.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#popUpParticularOption" pickOnBounds="true">
+                                       <image>
+                                          <Image url="Image/User.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <ToolBar prefHeight="35.0" prefWidth="309.0" style="-fx-background-color: none;">
+                                 <items>
+                                    <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="9.0" prefWidth="17.0">
+                                       <graphic>
+                                          <ImageView fx:id="goToSearch" accessibleText="Search.fxml" fitHeight="21.0" fitWidth="26.0">
+                                             <image>
+                                                <Image url="Image/Search Icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="searchBar" onAction="#searchBarClicked" onMouseClicked="#searchBarClicked" prefHeight="25.0" prefWidth="150.0" />
+                                 </items>
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                              </ToolBar>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </right>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>

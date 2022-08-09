@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MaintainEventsController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tbCreateEvent" text="Create Event">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lblName" layoutX="21.0" layoutY="95.0" text="Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStartDate" layoutX="21.0" layoutY="125.0" text="Start Date">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEndDate" layoutX="21.0" layoutY="155.0" text="End Date">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStartTime" layoutX="21.0" layoutY="185.0" text="Organization">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStartTime" layoutX="21.0" layoutY="215.0" text="End Time">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPurpose" layoutX="21.0" layoutY="305.0" text="Purpose">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtfdEventName" layoutX="103.0" layoutY="91.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdStartDate" layoutX="103.0" layoutY="121.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdEndDate" layoutX="103.0" layoutY="151.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdOrganization" layoutX="103.0" layoutY="181.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdEndTIme" layoutX="103.0" layoutY="211.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdPurpose" layoutX="103.0" layoutY="305.0" minWidth="205.0" prefHeight="54.0" prefWidth="149.0" />
+                        <ScrollPane layoutX="343.0" layoutY="69.0" prefHeight="445.0" prefWidth="446.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView prefHeight="495.0" prefWidth="466.0">
+                                       <columns>
+                                          <TableColumn fx:id="tblColumnName" prefWidth="75.0" text="Name" />
+                                          <TableColumn fx:id="tblColumnStartDate" prefWidth="75.0" text="Start Date" />
+                                          <TableColumn fx:id="tblColumnEndDate" prefWidth="75.0" text="End Date" />
+                                          <TableColumn fx:id="tblColumnStartTime" prefWidth="75.0" text="Start Time" />
+                                          <TableColumn fx:id="tblColumnEndTime" prefWidth="75.0" text="End Time" />
+                                          <TableColumn fx:id="tblColumnPurpose" prefWidth="75.0" text="Purpose" />
+                                          <TableColumn fx:id="tblColumnActivityList" prefWidth="75.0" text="Activity List" />
+                                          <TableColumn fx:id="tblColumnVenue" prefWidth="75.0" text="Venue" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="btnCreateEvent" layoutX="213.0" layoutY="502.0" mnemonicParsing="false" onAction="#createEvent" prefHeight="25.0" prefWidth="95.0" text="Create Event">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lblVenue2" layoutX="21.0" layoutY="435.0" prefHeight="40.0" prefWidth="54.0" text="Donation Request" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtfdDonationRequest" layoutX="103.0" layoutY="425.0" minHeight="60.0" minWidth="205.0" prefHeight="65.0" prefWidth="205.0" />
+                        <Label fx:id="lblStartDate2" layoutX="21.0" layoutY="275.0" text="Event Type">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtfdEventType" layoutX="103.0" layoutY="275.0" minWidth="205.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tbUpdateEvent" text="Update Event">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="343.0" layoutY="69.0" prefHeight="445.0" prefWidth="446.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView prefHeight="495.0" prefWidth="466.0">
+                                       <columns>
+                                          <TableColumn fx:id="tblColumnName1" prefWidth="75.0" text="Name" />
+                                          <TableColumn fx:id="tblColumnStartDate1" prefWidth="75.0" text="Start Date" />
+                                          <TableColumn fx:id="tblColumnEndDate1" prefWidth="75.0" text="End Date" />
+                                          <TableColumn fx:id="tblColumnStartTime1" prefWidth="75.0" text="Start Time" />
+                                          <TableColumn fx:id="tblColumnEndTime1" prefWidth="75.0" text="End Time" />
+                                          <TableColumn fx:id="tblColumnPurpose1" prefWidth="75.0" text="Purpose" />
+                                          <TableColumn fx:id="tblColumnActivityList1" prefWidth="75.0" text="Activity List" />
+                                          <TableColumn fx:id="tblColumnVenue1" prefWidth="75.0" text="Venue" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <Label fx:id="lblName1" layoutX="21.0" layoutY="95.0" text="Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStartDate1" layoutX="21.0" layoutY="125.0" text="Start Date">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEndDate1" layoutX="21.0" layoutY="155.0" text="End Date">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStartTime1" layoutX="21.0" layoutY="185.0" text="Organization">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStartTime1" layoutX="21.0" layoutY="215.0" text="End Time">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPurpose1" layoutX="21.0" layoutY="275.0" text="Event Type">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblActivityList1" layoutX="21.0" layoutY="305.0" text="Purpose">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtfdUpdateEventName" layoutX="103.0" layoutY="91.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdUpdateStartDate" layoutX="103.0" layoutY="121.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdUpdateEndDate" layoutX="103.0" layoutY="151.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdUpdateOrganization" layoutX="103.0" layoutY="181.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdUpdateEndTIme" layoutX="103.0" layoutY="211.0" minWidth="205.0" />
+                        <TextField fx:id="txtfdUpdatePurpose" layoutX="103.0" layoutY="275.0" minWidth="205.0" prefHeight="11.0" prefWidth="205.0" />
+                        <TextField fx:id="txtfdUpdateActivityList" layoutX="103.0" layoutY="305.0" minWidth="205.0" prefHeight="54.0" prefWidth="149.0" />
+                        <TextField fx:id="txtfdUpdateVenue1" layoutX="103.0" layoutY="425.0" minHeight="60.0" minWidth="205.0" prefHeight="65.0" prefWidth="205.0" />
+                        <Button fx:id="btnUpdateSearch" layoutX="152.0" layoutY="502.0" mnemonicParsing="false" text="Search">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnUpdate" layoutX="216.0" layoutY="502.0" mnemonicParsing="false" text="Update Event">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lblVenue21" layoutX="21.0" layoutY="435.0" prefHeight="40.0" prefWidth="54.0" text="Donation Request" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tbDeleteEvent" text="Delete Event">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="343.0" layoutY="69.0" prefHeight="445.0" prefWidth="446.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView prefHeight="495.0" prefWidth="466.0">
+                                       <columns>
+                                          <TableColumn fx:id="tblColumnName2" prefWidth="75.0" text="Name" />
+                                          <TableColumn fx:id="tblColumnStartDate2" prefWidth="75.0" text="Start Date" />
+                                          <TableColumn fx:id="tblColumnEndDate2" prefWidth="75.0" text="End Date" />
+                                          <TableColumn fx:id="tblColumnStartTime2" prefWidth="75.0" text="Start Time" />
+                                          <TableColumn fx:id="tblColumnEndTime2" prefWidth="75.0" text="End Time" />
+                                          <TableColumn fx:id="tblColumnPurpose2" prefWidth="75.0" text="Purpose" />
+                                          <TableColumn fx:id="tblColumnActivityList2" prefWidth="75.0" text="Activity List" />
+                                          <TableColumn fx:id="tblColumnVenue2" prefWidth="75.0" text="Venue" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="btnDelete" layoutX="163.0" layoutY="133.0" mnemonicParsing="false" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="21.0" layoutY="95.0" text="Event Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtfdDelete" layoutX="98.0" layoutY="91.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Button fx:id="btnDeleteSearch" layoutX="280.0" layoutY="91.0" mnemonicParsing="false" text="Search" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

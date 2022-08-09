@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bigPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="861.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SponsorView">
+   <center>
+      <StackPane fx:id="stackPane" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="eventScrollPane1" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="600.0">
+               <content>
+                  <Label fx:id="lbl" alignment="CENTER" prefHeight="393.0" prefWidth="665.0" text="Hi I'm empty on the inside" textFill="#cd1800">
+                     <font>
+                        <Font size="51.0" />
+                     </font>
+                  </Label>
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="eventScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="600.0">
+               <content>
+                  <BorderPane prefHeight="254.0" prefWidth="407.0">
+                     <center>
+                        <GridPane style="-: ;" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox fx:id="colOneVbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" />
+                              <VBox fx:id="colTwoVbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" />
+                              <VBox fx:id="colThreeVbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </StackPane>
+   </center>
+   <left>
+      <VBox prefHeight="399.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="sponsorEventBtn" mnemonicParsing="false" onAction="#displayEvents" prefHeight="25.0" prefWidth="174.0" text="Sponsor Event" />
+         </children></VBox>
+   </left>
+   <top>
+      <BorderPane prefHeight="112.0" prefWidth="861.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox prefHeight="112.0" prefWidth="448.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="homeBtn" accessibleText="ViewEvent.fxml" mnemonicParsing="false" onAction="#goToHome" prefHeight="47.0" prefWidth="100" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="12.0" visible="false" />
+                  <Button fx:id="eventBtn" mnemonicParsing="false" onAction="#popUpEventOption" prefHeight="47.0" prefWidth="100" text="Event">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Event.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="12.0" />
+                  <Button fx:id="feedbackBtn" accessibleText="FeedbackForm.fxml" mnemonicParsing="false" onAction="#goToFeedback" prefHeight="47.0" prefWidth="100" text="Feedback">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Feedback.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="10.0" prefWidth="12.0" visible="false" />
+                  <Button fx:id="maintainBtn" accessibleText="ViewFeedback.fxml" mnemonicParsing="false" onAction="#goToMaintain" prefHeight="47.0" prefWidth="100" text="Maintain">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="Image/Maintain.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefHeight="0.0" prefWidth="7.0" />
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="132.0" prefWidth="412.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="132.0" prefWidth="415.0">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="86.0" prefWidth="412.0">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="62.0" prefWidth="95.0" text="Username">
+                                 <font>
+                                    <Font name="AR ESSENCE" size="19.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="particularBtn" fitHeight="61.0" fitWidth="71.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#popUpParticularOption" pickOnBounds="true">
+                                 <image>
+                                    <Image url="Image/User.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <ToolBar prefHeight="35.0" prefWidth="309.0" style="-fx-background-color: none;">
+                           <items>
+                              <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="9.0" prefWidth="17.0">
+                                 <graphic>
+                                    <ImageView fx:id="goToSearch" accessibleText="Search.fxml" fitHeight="21.0" fitWidth="26.0">
+                                       <image>
+                                          <Image url="Image/Search Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="searchBar" onAction="#searchBarClicked" onMouseClicked="#searchBarClicked" prefHeight="25.0" prefWidth="150.0" />
+                           </items>
+                           <VBox.margin>
+                              <Insets left="70.0" />
+                           </VBox.margin>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+</BorderPane>
